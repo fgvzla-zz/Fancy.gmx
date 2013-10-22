@@ -9,10 +9,15 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_enemyB</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_player_walk</sprite>
+    <sprite>sprites\spr_player_punch</sprite>
+    <sprite>sprites\spr_player_punch2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\player_movement.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_enemyB</object>

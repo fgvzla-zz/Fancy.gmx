@@ -7,7 +7,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>10</bbox_left>
-  <bbox_right>20</bbox_right>
+  <bbox_right>25</bbox_right>
   <bbox_top>2</bbox_top>
   <bbox_bottom>31</bbox_bottom>
   <HTile>0</HTile>
@@ -19,7 +19,8 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\spr_player_0.png</frame>
-    <frame index="1">images\spr_player_1.png</frame>
+    <frame index="0">images\spr_player_punch2_0.png</frame>
+    <frame index="1">images\spr_player_punch2_1.png</frame>
+    <frame index="2">images\spr_player_punch2_2.png</frame>
   </frames>
 </sprite>
