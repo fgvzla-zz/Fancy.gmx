@@ -16,6 +16,14 @@
       <sprite>sprites\spr_flyingBriceno</sprite>
       <sprite>sprites\spr_mechaship</sprite>
       <sprite>sprites\spr_punch</sprite>
+      <sprite>sprites\spr_cloudA1</sprite>
+      <sprite>sprites\spr_cloudA2</sprite>
+      <sprite>sprites\spr_cloudA3</sprite>
+      <sprite>sprites\spr_cloudB1</sprite>
+      <sprite>sprites\spr_cloudC1</sprite>
+      <sprite>sprites\spr_cloudB2</sprite>
+      <sprite>sprites\spr_cloudC3</sprite>
+      <sprite>sprites\spr_cloudC2</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -34,12 +42,17 @@
     <object>objects\obj_damage</object>
     <object>objects\obj_camera</object>
     <objects name="Shmup">
+      <object>objects\obj_shmupCtrl</object>
       <object>objects\obj_flyingBriceno</object>
+      <object>objects\obj_mechaship</object>
+      <object>objects\obj_cloudA</object>
+      <object>objects\obj_cloudB</object>
+      <object>objects\obj_cloudC</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_shmup</room>
     <room>rooms\rm_beu</room>
+    <room>rooms\rm_shmup</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
