@@ -16,7 +16,8 @@ if (keyboard_check(vk_left) || keyboard_check(vk_right) ||
             }
             if image_xscale > 0
                 image_xscale = -image_xscale;
-            x -= xSpeed;
+            if !place_meeting(x - 5, y, obj_wall)
+                x -= xSpeed;
         }
         if (keyboard_check(vk_right)) {
             if (sprite_index != spr_player_walk) {
@@ -26,7 +27,8 @@ if (keyboard_check(vk_left) || keyboard_check(vk_right) ||
             }
             if image_xscale < 0
                 image_xscale = -image_xscale;
-            x += xSpeed;
+            if !place_meeting(x + 5, y, obj_wall)
+                x += xSpeed;
         }
     }
     
@@ -43,7 +45,8 @@ if (keyboard_check(vk_left) || keyboard_check(vk_right) ||
                 sprite_index = spr_player_walk;
                 image_speed = walkSpeed;
             }
-            y -= ySpeed;
+            if !place_meeting(x, y - 5, obj_wall)
+                y -= ySpeed;
         }
         if (keyboard_check(vk_down)) {
             if (sprite_index != spr_player_walk) {
@@ -51,7 +54,8 @@ if (keyboard_check(vk_left) || keyboard_check(vk_right) ||
                 sprite_index = spr_player_walk;
                 image_speed = walkSpeed;
             }
-            y += ySpeed;
+            if !place_meeting(x, y + 5, obj_wall)
+                y += ySpeed;
         }
     }
 }
@@ -64,3 +68,6 @@ if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right) ||
     image_speed = standSpeed;
         
 }
+
+if keyboard_check(vk_escape)
+    game_end();

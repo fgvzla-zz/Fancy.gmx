@@ -13,15 +13,20 @@
     <sprite>sprites\spr_player_punch</sprite>
     <sprite>sprites\spr_player_punch2</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgd_beu</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\player_movement.gml</script>
+    <script>scripts\player_attack_beu.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_enemyB</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_damage</object>
+    <object>objects\obj_camera</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_beu</room>

@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xSpeed = 8;
-ySpeed = 6;
+            <string>xSpeed = 5;
+ySpeed = 4;
 standSpeed = 0.09;
 walkSpeed = 0.4;
 punchSpeed = 0.3;
@@ -82,61 +82,41 @@ image_speed = standSpeed;
       </action>
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>if (keyboard_check_pressed(ord('Z'))) {
-    if (punch){
-        punch2 = true;
-    } else if (punch2){
-        punch = true;
-    } else {
-        image_index = 0;
-        sprite_index = spr_player_punch;
-        image_speed = punchSpeed;
-        punch = true;
-    }
-}
-
-if ((punch || punch2) &amp;&amp; image_index &gt; image_number - 1) {
-    if (punch) {
-        if(sprite_index == spr_player_punch2) {
-            punch2 = false;
-            image_index = 0;
-            sprite_index = spr_player_punch;
-            image_speed = punchSpeed;
-        } else if (punch2){
-            punch = false;
-            image_index = 0;
-            sprite_index = spr_player_punch2;
-            image_speed = punchSpeed;
-        } else {
-            punch = false;
-            image_index = 0;
-            sprite_index = spr_player;
-            image_speed = standSpeed; 
-        }
-    } else if (punch2) {
-            punch2 = false;
-            image_index = 0;
-            sprite_index = spr_player;
-            image_speed = standSpeed; 
-
-    }
-
-}
-</string>
+            <kind>9</kind>
+            <script>player_attack_beu</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
