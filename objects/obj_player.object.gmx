@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xSpeed = 5;
-ySpeed = 4;
+            <string>xSpeed = 3;
+ySpeed = 2;
 standSpeed = 0.09;
 walkSpeed = 0.4;
 punchSpeed = 0.3;
