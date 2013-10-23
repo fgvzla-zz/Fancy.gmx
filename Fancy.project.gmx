@@ -9,6 +9,7 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_enemyB</sprite>
     <sprite>sprites\spr_wall</sprite>
+<<<<<<< HEAD
     <sprites name="Shmup">
       <sprite>sprites\spr_flyingBriceno</sprite>
       <sprite>sprites\spr_mechaship</sprite>
@@ -19,13 +20,32 @@
     <background>background\bg_water</background>
   </backgrounds>
   <paths name="paths"/>
+=======
+    <sprite>sprites\spr_player_walk</sprite>
+    <sprite>sprites\spr_player_punch</sprite>
+    <sprite>sprites\spr_player_punch2</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bgd_beu</background>
+  </backgrounds>
+  <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\player_movement.gml</script>
+    <script>scripts\player_attack_beu.gml</script>
+  </scripts>
+>>>>>>> f56453a68c9809fe89605d62f520ee0484241733
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_enemyB</object>
     <object>objects\obj_wall</object>
+<<<<<<< HEAD
     <objects name="Shmup">
       <object>objects\obj_flyingBriceno</object>
     </objects>
+=======
+    <object>objects\obj_damage</object>
+    <object>objects\obj_camera</object>
+>>>>>>> f56453a68c9809fe89605d62f520ee0484241733
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_shmup</room>
