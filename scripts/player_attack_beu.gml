@@ -9,7 +9,7 @@ if (keyboard_check_pressed(ord('Z'))) {
         image_speed = punchSpeed;
         punch = true;
         if (image_xscale > 0)
-            instance_create(x + 20, y, obj_damage);
+            instance_create(x, y, obj_damage);
         else
             instance_create(x - 20, y, obj_damage);
     }
@@ -23,7 +23,7 @@ if ((punch || punch2) && image_index > image_number - 1) {
             sprite_index = spr_player_punch;
             image_speed = punchSpeed;
             if (image_xscale > 0)
-                instance_create(x + 20, y, obj_damage);
+                instance_create(x, y, obj_damage);
             else
                 instance_create(x - 20, y, obj_damage);
         } else if (punch2){
@@ -32,7 +32,7 @@ if ((punch || punch2) && image_index > image_number - 1) {
             sprite_index = spr_player_punch2;
             image_speed = punchSpeed;
             if (image_xscale > 0)
-                instance_create(x + 20, y, obj_damage);
+                instance_create(x, y, obj_damage);
             else
                 instance_create(x - 20, y, obj_damage);
         } else {

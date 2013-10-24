@@ -6,14 +6,9 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_enemyB</sprite>
-    <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_player_walk</sprite>
-    <sprite>sprites\spr_player_punch</sprite>
-    <sprite>sprites\spr_player_punch2</sprite>
     <sprites name="Shmup">
       <sprite>sprites\spr_flyingBriceno</sprite>
+      <sprite>sprites\spr_flyingBricenoInv</sprite>
       <sprite>sprites\spr_mechaship</sprite>
       <sprite>sprites\spr_punch</sprite>
       <sprite>sprites\spr_cloudA1</sprite>
@@ -24,35 +19,61 @@
       <sprite>sprites\spr_cloudB2</sprite>
       <sprite>sprites\spr_cloudC3</sprite>
       <sprite>sprites\spr_cloudC2</sprite>
+      <sprite>sprites\spr_laser</sprite>
+    </sprites>
+    <sprites name="BeU">
+      <sprite>sprites\spr_player_punch2</sprite>
+      <sprite>sprites\spr_player_punch</sprite>
+      <sprite>sprites\spr_player_walk</sprite>
+      <sprite>sprites\spr_damage</sprite>
+      <sprite>sprites\spr_camera</sprite>
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_enemyB</sprite>
+      <sprite>sprites\spr_player</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_water</background>
     <background>background\bgd_beu</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+    <path>paths\path1</path>
+    <path>paths\path2</path>
+    <path>paths\path3</path>
+  </paths>
   <scripts name="scripts">
-    <script>scripts\player_movement.gml</script>
-    <script>scripts\player_attack_beu.gml</script>
+    <scripts name="BeU">
+      <script>scripts\player_attack_beu.gml</script>
+      <script>scripts\player_movement.gml</script>
+    </scripts>
+    <scripts name="Shump">
+      <script>scripts\player_movement_shump.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_enemyB</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_damage</object>
-    <object>objects\obj_camera</object>
     <objects name="Shmup">
       <object>objects\obj_shmupCtrl</object>
       <object>objects\obj_flyingBriceno</object>
       <object>objects\obj_mechaship</object>
       <object>objects\obj_cloudA</object>
       <object>objects\obj_cloudB</object>
+      <object>objects\obj_laser</object>
+      <object>objects\obj_punch</object>
       <object>objects\obj_cloudC</object>
+    </objects>
+    <objects name="BeU">
+      <object>objects\obj_player</object>
+      <object>objects\obj_enemyB</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_damage</object>
+      <object>objects\obj_damageB</object>
+      <object>objects\obj_camera</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_beu</room>
     <room>rooms\rm_shmup</room>
+    <room>rooms\rm_beu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
