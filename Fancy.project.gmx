@@ -74,6 +74,9 @@
       <script>scripts\player_movement_contra.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="Shmup">
       <object>objects\obj_shmupCtrl</object>
@@ -106,6 +109,7 @@
     <room>rooms\rm_contra</room>
     <room>rooms\rm_shmup</room>
     <room>rooms\rm_beu</room>
+    <room>rooms\rm_m1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
