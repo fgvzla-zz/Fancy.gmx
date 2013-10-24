@@ -31,16 +31,36 @@
       <sprite>sprites\spr_enemyB</sprite>
       <sprite>sprites\spr_player</sprite>
     </sprites>
+    <sprites name="Contra">
+      <sprite>sprites\spr_cabasho</sprite>
+      <sprite>sprites\spr_ramboBricenoWalk</sprite>
+      <sprite>sprites\spr_ramboBricenoJump</sprite>
+      <sprite>sprites\spr_ramboBricenoStand</sprite>
+      <sprite>sprites\spr_platform</sprite>
+      <sprite>sprites\spr_sun</sprite>
+      <sprite>sprites\spr_heart</sprite>
+      <sprite>sprites\spr_laserContra</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_water</background>
-    <background>background\bgd_beu</background>
+    <background>background\bg_beu</background>
+    <background>background\bg_block</background>
+    <background>background\bg_contra</background>
   </backgrounds>
   <paths name="paths">
-    <path>paths\path0</path>
-    <path>paths\path1</path>
-    <path>paths\path2</path>
-    <path>paths\path3</path>
+    <paths name="Shump">
+      <path>paths\path0</path>
+      <path>paths\path1</path>
+      <path>paths\path2</path>
+      <path>paths\path3</path>
+    </paths>
+    <paths name="Contra">
+      <path>paths\path4</path>
+      <path>paths\path5</path>
+      <path>paths\path6</path>
+      <path>paths\path7</path>
+    </paths>
   </paths>
   <scripts name="scripts">
     <scripts name="BeU">
@@ -49,6 +69,9 @@
     </scripts>
     <scripts name="Shump">
       <script>scripts\player_movement_shump.gml</script>
+    </scripts>
+    <scripts name="Contra">
+      <script>scripts\player_movement_contra.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -70,8 +93,17 @@
       <object>objects\obj_damageB</object>
       <object>objects\obj_camera</object>
     </objects>
+    <objects name="Contra">
+      <object>objects\obj_ramboBriceno</object>
+      <object>objects\obj_cabasho</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_sun</object>
+      <object>objects\obj_heart</object>
+    </objects>
+    <object>objects\obj_laserContra</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_contra</room>
     <room>rooms\rm_shmup</room>
     <room>rooms\rm_beu</room>
   </rooms>
