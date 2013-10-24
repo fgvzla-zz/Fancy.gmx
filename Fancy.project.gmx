@@ -106,9 +106,9 @@
     <object>objects\obj_laserContra</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_beu</room>
     <room>rooms\rm_contra</room>
     <room>rooms\rm_shmup</room>
+    <room>rooms\rm_beu</room>
     <room>rooms\rm_m1</room>
   </rooms>
   <help>

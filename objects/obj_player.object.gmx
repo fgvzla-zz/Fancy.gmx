@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health = 20000;
+            <string>health = 20;
 dcount = 0;
 xSpeed = 3;
 ySpeed = 2;
