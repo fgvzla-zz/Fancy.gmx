@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xSpeed = 3;
+            <string>health = 20;
+dcount = 0;
+xSpeed = 3;
 ySpeed = 2;
 standSpeed = 0.09;
 walkSpeed = 0.4;
@@ -117,6 +119,41 @@ image_speed = standSpeed;
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_damageB">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>health -= 1;
+dcount += 1;
+if dcount = 3 {
+    dcount = 0;
+    if image_xscale &gt; 0
+        hspeed = -8;
+    else
+        hspeed = +8;
+    alarm[1] = 5;
+}
+if (health &lt; 1) {
+    instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>
