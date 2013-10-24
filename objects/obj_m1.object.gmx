@@ -76,7 +76,7 @@ alarm[0] = audio_sound_length(bgm_intro1) * room_speed;
 
 draw_text_color(78,40, "PARTE 1", c_white, c_white, c_white, c_white, 1);
 draw_text_color(66,80, "Z - ATAQUE", c_white, c_white, c_white, c_white, 1);
-draw_text_color(5,100, "FLEHCAS - MOVIMIENTO", c_white, c_white, c_white, c_white, 1);
+draw_text_color(5,100, "FLECHAS - MOVIMIENTO", c_white, c_white, c_white, c_white, 1);
 </string>
           </argument>
         </arguments>
