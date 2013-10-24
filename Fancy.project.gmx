@@ -37,6 +37,7 @@
       <sprite>sprites\spr_enemyB_punch</sprite>
       <sprite>sprites\spr_enemyB_walk</sprite>
       <sprite>sprites\spr_enemyB</sprite>
+      <sprite>sprites\spr_arrow</sprite>
     </sprites>
     <sprites name="Contra">
       <sprite>sprites\spr_cabasho</sprite>
@@ -108,6 +109,7 @@
       <object>objects\obj_damage</object>
       <object>objects\obj_damageB</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_arrow</object>
     </objects>
     <objects name="Contra">
       <object>objects\obj_ramboBriceno</object>
