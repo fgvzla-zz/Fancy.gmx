@@ -69,5 +69,8 @@ if (keyboard_check_released(vk_left) || keyboard_check_released(vk_right) ||
         
 }
 
+if keyboard_check(ord('Y'))
+    room_goto(rm_m1);
+
 if keyboard_check(vk_escape)
     game_end();
