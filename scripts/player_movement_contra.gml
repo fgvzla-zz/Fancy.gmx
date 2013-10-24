@@ -26,7 +26,7 @@ if(keyboard_check(vk_left) && keyboard_check(vk_right)){
 }
 
 if keyboard_check_pressed(ord('Z')){
-    obj = choose(obj_sun, obj_heart);
+    obj = choose(obj_bullet1, obj_bullet2, obj_bullet3);
     instance_create(x + 8, y, obj);
 }
 

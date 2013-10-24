@@ -153,7 +153,7 @@ alarm[0] = 8;
     hp -= 1;
     with (other) instance_destroy();
     if hp == 0
-        instance_destroy();
+        room_goto_previous();
     alarm[0] = 1;
     alarm[1] = 49;
 }

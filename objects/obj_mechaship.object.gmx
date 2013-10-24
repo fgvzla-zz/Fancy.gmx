@@ -187,7 +187,7 @@ alarm[1] = time + 10;
             <string>hp -= 1;
 with (other) instance_destroy();
 if hp == 0 {
-    instance_destroy()
+    room_goto(rm_m3);
 }
 </string>
           </argument>

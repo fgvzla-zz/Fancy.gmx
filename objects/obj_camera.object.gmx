@@ -28,8 +28,33 @@
             <string>x = 200;
 camPlayer = false;
 stage = 1;
-enemyCount = 6 + (stage * 3);
+enemyCount = (stage * 3);
 alarm[0] = 1;
+audio_play_music(bgm_song1, 0);
+alarm[2] = audio_sound_length(bgm_song1) * room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto_previous();
 </string>
           </argument>
         </arguments>
@@ -124,9 +149,11 @@ alarm[0] = 1;
     instance_create(x + 40, y, obj_wall);
     camPlayer = true;
     stage += 1;
-    enemyCount = 6 + (stage * 3);
+    enemyCount = 1 + (stage * 3);
 }
 
+if stage == 4
+    room_goto(rm_m2);
 if (camPlayer)
     if (obj_player.x &gt;= x - 4) {
         view_object[0] = obj_camera;

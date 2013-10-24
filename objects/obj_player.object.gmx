@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -174,7 +174,7 @@ if dcount = 3 {
     alarm[0] = 5;
 }
 if (health &lt; 1) {
-    instance_destroy();
+    room_goto_previous();
 }
 </string>
           </argument>

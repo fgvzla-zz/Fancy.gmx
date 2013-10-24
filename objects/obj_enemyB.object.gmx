@@ -31,6 +31,10 @@ ySpeed = 0.8;
 dir = 0;
 punch = 0;
 dcount = 0;
+standSpeed = 0.09;
+walkSpeed = 0.4;
+punchSpeed = 0.3;
+image_speed = standSpeed;
 // Estados de state:
 // 0 - se queda parado
 // 1 - camina hacia player
@@ -161,12 +165,17 @@ if rnd &gt; 1 {
           <argument>
             <kind>1</kind>
             <string>if state == 1 {
+            if (sprite_index != spr_enemyB_walk) {
+                image_index = 0;
+                sprite_index = spr_enemyB_walk;
+                image_speed = walkSpeed;
+            }
         if obj_player.x + 16 &lt; x {
-            if image_xscale &lt; 0
+            if image_xscale &gt; 0
                 image_xscale = -image_xscale;
             x -= xSpeed;
         } else if obj_player.x - 16&gt; x {
-            if image_xscale &gt; 0
+            if image_xscale &lt; 0
                 image_xscale = -image_xscale;
             x += xSpeed;
         }
@@ -178,6 +187,11 @@ if rnd &gt; 1 {
             alarm[0] = random_range(50, 65);
             
 } else if state == 2 {
+            if (sprite_index != spr_enemyB_walk) {
+                image_index = 0;
+                sprite_index = spr_enemyB_walk;
+                image_speed = walkSpeed;
+            }
         if dir == 1
             y -= ySpeed;
         else if dir == 2
@@ -185,6 +199,11 @@ if rnd &gt; 1 {
         if alarm[0] &lt; 0
             alarm[0] = random_range(20, 30);
 } else if state == 3 {
+            if (sprite_index != spr_enemyB_punch) {
+                image_index = 0;
+                sprite_index = spr_enemyB_punch;
+                image_speed = walkSpeed;
+            }
         if image_xscale &lt; 0
             instance_create(x, y, obj_damageB);
         else
@@ -222,7 +241,7 @@ if rnd &gt; 1 {
 dcount += 1;
 if dcount = 3 {
     dcount = 0;
-    if image_xscale &lt; 0
+    if image_xscale &gt; 0
         hspeed = -8;
     else
         hspeed = +8;
