@@ -79,14 +79,14 @@ alarm[2] = audio_sound_length(bgm_song1) * room_speed;
           <argument>
             <kind>1</kind>
             <string>if (enemyCount &gt; 0 &amp;&amp; !camPlayer){
-    activeEnemies = instance_number(obj_enemyB);
+    activeEnemies = instance_number(obj_enemyB) + instance_number(obj_enemyA);
     var i;
     for (i = activeEnemies; i &lt; 3; i += 1) {
-        rnd = random_range(1, 3);
+        rnd = choose(1, 2);
         if rnd == 1
-            instance_create(x + 60, random_range(80, 150), obj_enemyB);
+            instance_create(x + 60, random_range(80, 150), choose(obj_enemyA, obj_enemyB));
         else
-            instance_create(x - 220, random_range(80, 150), obj_enemyB);
+            instance_create(x - 220, random_range(80, 150), choose(obj_enemyA, obj_enemyB));
         enemyCount -= 1;
     }
     alarm[1] = 160;
@@ -114,9 +114,9 @@ alarm[2] = audio_sound_length(bgm_song1) * room_speed;
           <argument>
             <kind>1</kind>
             <string>if (enemyCount &gt; 0) {
-    instance_create(x + 90, random_range(80, 150), obj_enemyB);
-    instance_create(x - 240, random_range(80, 150), obj_enemyB);
-    instance_create(x + 90, random_range(80, 150), obj_enemyB);
+    instance_create(x + 90, random_range(80, 150), choose(obj_enemyA, obj_enemyB));
+    instance_create(x - 240, random_range(80, 150), choose(obj_enemyA, obj_enemyB));
+    instance_create(x + 90, random_range(80, 150), choose(obj_enemyA, obj_enemyB));
     enemyCount -= 3;
     alarm[1] = 130;
 }
@@ -142,7 +142,11 @@ alarm[2] = audio_sound_length(bgm_song1) * room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(obj_enemyB) &amp;&amp; !camPlayer &amp;&amp; enemyCount &lt; 1) {
+            <string>// Si no existen más enemigos y no hay más enemigos por crear,
+// se avanza la camara a la siguiente parte del mundo, la vista
+// se le da al jugador y se crea una pared nueva en la siguiente
+// parte del mundo
+if (!instance_exists(obj_enemyB) &amp;&amp;!instance_exists(obj_enemyA) &amp;&amp; !camPlayer &amp;&amp; enemyCount &lt; 1) {
     wall = instance_place(x + 40, y, obj_wall);
     with (wall) instance_destroy();
     instance_create(x - 10, y + 30, obj_arrow);
@@ -153,7 +157,7 @@ alarm[2] = audio_sound_length(bgm_song1) * room_speed;
     stage += 1;
     if stage == 4
         room_goto(rm_m2);
-    enemyCount = floor((stage * 2.5));
+    enemyCount = floor((stage * 2));
 }
 
 
@@ -164,6 +168,29 @@ if (camPlayer)
         camPlayer = false;
         alarm[0] = 1;
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="84">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto_next();
 </string>
           </argument>
         </arguments>

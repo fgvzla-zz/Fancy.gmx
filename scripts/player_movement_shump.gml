@@ -35,3 +35,6 @@ if debug_mode && keyboard_check(ord('T'))
 
 if keyboard_check(vk_escape)
     game_end();
+    
+if keyboard_check(vk_f5)
+    game_restart();

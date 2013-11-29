@@ -1,6 +1,6 @@
 if (keyboard_check(vk_left) || keyboard_check(vk_right) ||
     keyboard_check(vk_up) || keyboard_check(vk_down) && !punch && !punch2)
-{   
+{
     if(keyboard_check(vk_left) && keyboard_check(vk_right)){
         if (sprite_index != spr_player && (!keyboard_check(vk_up) || !keyboard_check(vk_down))) {
             image_index = 0;
@@ -76,3 +76,6 @@ if debug_mode && keyboard_check(ord('T'))
 
 if keyboard_check(vk_escape)
     game_end();
+
+if keyboard_check(vk_f5)
+    game_restart();

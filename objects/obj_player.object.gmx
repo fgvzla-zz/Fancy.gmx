@@ -59,6 +59,8 @@ image_speed = standSpeed;
           <argument>
             <kind>1</kind>
             <string>hspeed = 0;
+punch = false;
+punch2 = false;
 </string>
           </argument>
         </arguments>
